@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/custom/navbar"
-import { AdminDashboard } from "@/components/custom/admin-dashboard"
+import { AdminDashboard } from "@/components/custom/admin/dashboard"
 
 export default function AdminPage() {
   return (

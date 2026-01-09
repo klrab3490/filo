@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/custom/navbar"
-import { PostCard } from "@/components/post-card"
+import { PostCard } from "@/components/custom/post-card"
 import { posts } from "@/lib/dummy-data"
 import { ScrollArea } from "@/components/ui/scroll-area"
 

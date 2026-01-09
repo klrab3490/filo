@@ -17,6 +17,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ userId
   const isOwnProfile = user.id === currentUser.id
   const userPosts = posts.filter((p) => p.userId === user.id)
   const likedPosts = posts.filter((p) => p.isLiked) // Simple mock of liked posts
+  const fullName = `${user.firstName} ${user.lastName}`
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -26,11 +27,11 @@ export default async function ProfilePage({ params }: { params: Promise<{ userId
           {/* Profile Header */}
           <div className="flex flex-col items-center gap-4 text-center">
             <Avatar className="h-24 w-24 border-2 border-primary/20">
-              <AvatarImage src={user.avatar || "/placeholder.svg"} alt={user.name} />
-              <AvatarFallback className="text-2xl">{user.name.charAt(0)}</AvatarFallback>
+              <AvatarImage src={user.avatar || "/placeholder.svg"} alt={fullName} />
+              <AvatarFallback className="text-2xl">{user.firstName.charAt(0)}</AvatarFallback>
             </Avatar>
             <div className="space-y-1">
-              <h1 className="text-2xl font-bold tracking-tight">{user.name}</h1>
+              <h1 className="text-2xl font-bold tracking-tight">{fullName}</h1>
               <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
                 <span className="font-medium text-foreground">{user.followers} followers</span>
                 <span>•</span>

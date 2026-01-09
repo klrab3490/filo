@@ -19,10 +19,7 @@ export function RegisterForm() {
         // Simulate registration logic
         setTimeout(() => {
             setIsLoading(false)
-            toast({
-                title: "Account created",
-                description: "Welcome to Flux! Your account is ready.",
-            })
+            toast.success("Welcome to Flux! Your account is ready.")
             router.push("/feed")
         }, 1500)
     }

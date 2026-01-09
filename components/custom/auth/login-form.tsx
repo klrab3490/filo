@@ -19,10 +19,7 @@ export function LoginForm() {
         // Simulate a login call
         setTimeout(() => {
             setIsLoading(false)
-            toast({
-                title: "Success",
-                description: "Welcome back to Flux!",
-            })
+            toast.success("Welcome back to Flux!")
             router.push("/feed")
         }, 1000)
     }
